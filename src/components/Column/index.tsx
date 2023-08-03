@@ -57,7 +57,7 @@ export const Column: FunctionComponent<Props> = ({
         </button>
       )}
       {showForm && (
-        <form onSubmit={crearCandidato}>
+        <form className={style.container__form} onSubmit={crearCandidato}>
           <label htmlFor="nombre">Nombre</label>
           <input id="nombre" name="name" type="text" />
 
