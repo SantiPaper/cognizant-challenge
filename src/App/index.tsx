@@ -18,8 +18,20 @@ function App() {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
 
   useEffect(() => {
-    api.candidates.list().then((data) => setCandidates(data));
+    const candidateStorage = localStorage.getItem("candidates");
+
+    if (candidateStorage) {
+      setCandidates(JSON.parse(candidateStorage));
+    } else {
+      api.candidates.list().then((data) => {
+        setCandidates(data);
+      });
+    }
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("candidates", JSON.stringify(candidates));
+  }, [candidates]);
 
   const addCandidate = (candidato: Candidate) => {
     setCandidates([...candidates, candidato]);

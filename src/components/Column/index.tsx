@@ -33,7 +33,6 @@ export const Column: FunctionComponent<Props> = ({
     newCandidate.step = "Entrevista inicial";
 
     addCandidate(newCandidate as unknown as Candidate);
-    console.log(e.target);
   };
 
   return (
