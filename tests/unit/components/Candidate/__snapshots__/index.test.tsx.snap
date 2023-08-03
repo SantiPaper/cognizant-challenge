@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Componente candidato > Renderiza la informacion 1`] = `
+<div>
+  <article
+    class="_containerCandidato_59e197"
+  >
+    <div>
+      <h3>
+        Santiago
+      </h3>
+      <p>
+        Burro
+      </p>
+    </div>
+    <div>
+      <button
+        aria-label="Avanzar proceso"
+      >
+        &gt;
+      </button>
+    </div>
+  </article>
+</div>
+`;
