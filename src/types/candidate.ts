@@ -1,6 +1,13 @@
 export interface Candidate {
   id: string;
   name: string;
-  step: "Entrevista inicial" | "Entrevista técnica" | "Oferta" | "Asignación" | "Rechazo";
   comments: string;
+  step: Step;
 }
+
+export type Step =
+  | "Entrevista inicial"
+  | "Entrevista técnica"
+  | "Oferta"
+  | "Asignación"
+  | "Rechazo";
