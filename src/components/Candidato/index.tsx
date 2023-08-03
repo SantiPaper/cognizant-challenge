@@ -18,10 +18,17 @@ export const Candidato: FunctionComponent<Props> = ({candidato, advance}) => {
       </div>
       <div>
         {candidato.step !== "Entrevista inicial" && (
-          <button onClick={() => advance(candidato.id, "retroceder")}>{"<"}</button>
+          <button
+            aria-label="Retroceder proceso"
+            onClick={() => advance(candidato.id, "retroceder")}
+          >
+            {"<"}
+          </button>
         )}
         {candidato.step !== "Rechazo" && (
-          <button onClick={() => advance(candidato.id, "avanzar")}>{">"}</button>
+          <button aria-label="Avanzar proceso" onClick={() => advance(candidato.id, "avanzar")}>
+            {">"}
+          </button>
         )}
       </div>
     </article>
