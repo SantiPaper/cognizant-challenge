@@ -10,18 +10,11 @@ import style from "./index.module.scss";
 type Props = {
   candidatos: Candidate[];
   titulo: Step;
-  showButton?: boolean;
   advance: (id: string, action: "avanzar" | "retroceder") => void;
   addCandidate: (candidato: Candidate) => void;
 };
 
-export const Column: FunctionComponent<Props> = ({
-  candidatos,
-  titulo,
-  advance,
-  showButton,
-  addCandidate,
-}) => {
+export const Column: FunctionComponent<Props> = ({candidatos, titulo, advance, addCandidate}) => {
   const [showForm, setShowForm] = useState(false);
 
   const crearCandidato = (e: FormEvent<HTMLFormElement>) => {
@@ -47,7 +40,7 @@ export const Column: FunctionComponent<Props> = ({
         <p>No hay candidatos</p>
       )}
 
-      {showButton && (
+      {titulo === "Entrevista inicial" && (
         <button
           onClick={() => {
             setShowForm(!showForm);
@@ -59,12 +52,12 @@ export const Column: FunctionComponent<Props> = ({
       {showForm && (
         <form className={style.container__form} onSubmit={crearCandidato}>
           <label htmlFor="nombre">Nombre</label>
-          <input id="nombre" name="name" type="text" />
+          <input required id="nombre" name="name" type="text" />
 
           <label htmlFor="comentario">Algun comentario</label>
-          <input id="comentario" name="comments" type="text" />
+          <input required id="comentario" name="comments" type="text" />
 
-          <button>Dale loco</button>
+          <button>Agregar</button>
         </form>
       )}
     </div>
