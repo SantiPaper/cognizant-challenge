@@ -55,7 +55,7 @@ export const Column: FunctionComponent<Props> = ({candidatos, titulo, advance, a
           <input required id="nombre" name="name" type="text" />
 
           <label htmlFor="comentario">Algun comentario</label>
-          <input required id="comentario" name="comments" type="text" />
+          <input id="comentario" name="comments" type="text" />
 
           <button>Agregar</button>
         </form>
