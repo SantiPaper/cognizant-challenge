@@ -14,15 +14,13 @@ const steps: Step[] = [
   "Rechazo",
 ];
 
+const initialState = JSON.parse(localStorage.getItem("candidates") || "[]");
+
 function App() {
-  const [candidates, setCandidates] = useState<Candidate[]>([]);
+  const [candidates, setCandidates] = useState<Candidate[]>(initialState);
 
   useEffect(() => {
-    const candidateStorage = localStorage.getItem("candidates");
-
-    if (candidateStorage) {
-      setCandidates(JSON.parse(candidateStorage));
-    } else {
+    if (!candidates.length) {
       api.candidates.list().then((data) => {
         setCandidates(data);
       });
@@ -61,7 +59,6 @@ function App() {
           addCandidate={addCandidate}
           advance={advance}
           candidatos={candidates.filter((candidate) => candidate.step === step)}
-          showButton={step === "Entrevista inicial"}
           titulo={step}
         />
       ))}
