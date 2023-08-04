@@ -1,0 +1,54 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Componente column > Se rendenderizan todos los participantes 1`] = `
+<div>
+  <div
+    class="_column_545bf0"
+  >
+    <h2>
+      Entrevista inicial
+    </h2>
+    <article
+      class="_containerCandidato_59e197"
+    >
+      <div>
+        <h3>
+          Santiago
+        </h3>
+        <p>
+          Burro
+        </p>
+      </div>
+      <div>
+        <button
+          aria-label="Avanzar proceso"
+        >
+          &gt;
+        </button>
+      </div>
+    </article>
+    <article
+      class="_containerCandidato_59e197"
+    >
+      <div>
+        <h3>
+          Emiliano
+        </h3>
+        <p>
+          Crack
+        </p>
+      </div>
+      <div>
+        <button
+          aria-label="Avanzar proceso"
+        >
+          &gt;
+        </button>
+      </div>
+    </article>
+    <button>
+      Agregar candidato
+    </button>
+  </div>
+</div>
+`;
