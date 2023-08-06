@@ -19,7 +19,7 @@ export const Column: FunctionComponent<Props> = ({candidatos, titulo, advance, a
 
   const crearCandidato = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.target);
+    const formData = new FormData(e.target as HTMLFormElement);
     const newCandidate = Object.fromEntries(formData.entries());
 
     newCandidate.id = v4();
@@ -54,7 +54,7 @@ export const Column: FunctionComponent<Props> = ({candidatos, titulo, advance, a
           <label htmlFor="nombre">Nombre</label>
           <input required id="nombre" name="name" type="text" />
 
-          <label htmlFor="comentario">Algun comentario</label>
+          <label htmlFor="comentario">Algún comentario</label>
           <input id="comentario" name="comments" type="text" />
 
           <button>Agregar</button>

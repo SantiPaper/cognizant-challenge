@@ -20,8 +20,24 @@
 }
 
 .container__form{
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: auto;
+}
+
+@media (max-width: 1000px) {
+  .column{
+    width: 50%;
+    &:not(:last-of-type){
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .column{
+    width: 80%;
+  }
 }
