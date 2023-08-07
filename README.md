@@ -8,7 +8,7 @@
 
 ## 💻 Link del deploy
 
-https://adviency-80nnq2rya-santipaper.vercel.app/
+https://cognizant-challenge-santipaper.vercel.app
 
 ## 🤔 ¿Cómo iniciar el proyecto localmente?
 
